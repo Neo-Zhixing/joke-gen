@@ -41,7 +41,6 @@
 			.then(res => res.text())
 			.then(text => text.split('---'))
 			.then(jokes => {
-				console.log(jokes)
 				document.getElementById("gen-btn").onclick = () => {
 					const mrange = document.getElementById("mrange").value || "CS240"
 					const mthing = document.getElementById("mthing").value || "coding standard"
