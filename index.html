@@ -31,15 +31,11 @@
 					<input class="input" id="mrange" type="text" placeholder="CS240">
 				</div>
 			</div>
-			<button id="gen-btn" class="button is-primary">Generate!</button>
-			<div class="section" id="mjoke">
-				dfadsf
+			<div class="has-text-centered">
+				<button id="gen-btn" class="button is-primary">Generate!</button>
 			</div>
+			<div class="section has-text-centered" id="mjoke"></div>
 		</div>
-		<script
-  			src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
-  			integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI="
-  			crossorigin="anonymous"></script>
 		<script>
 			fetch("./jokes.txt")
 			.then(res => res.text())
@@ -65,9 +61,6 @@
 					document.getElementById("mjoke").innerHTML = resString
 				}
 			})
-
-		
-	
 	</script>
 	</body>
 </html>
