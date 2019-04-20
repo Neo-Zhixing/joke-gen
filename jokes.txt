@@ -24,7 +24,9 @@ At a meeting of mvictim, mman makes a speech.
 
 A voice from the audience, "And what about us?
 ---
-A man loses his talking parrot. He then publishes an official statement: "I lost a parrot. Also, I disagree with that parrot regarding mthing."
+A man loses his talking parrot. 
+
+He immediately publishes a statement: "I lost a parrot. Also, I disagree with that parrot regarding mthing."
 ---
 "Is mthing an art or a science?"
 
