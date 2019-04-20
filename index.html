@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="section has-text-centered">
+				<h1 class="title">Soviet Union Jokes Generator</h1>
+				<h4 class="subtitle">Made by Neo and Tiger</h4>
+			</div>
+			<div class="section">
+				<div class="field">
+					<label class="label">The matter to be sarcastic about?</label>
+					<input class="input" id="mthing" type="text" placeholder="Coding Standard">
+				</div>
+				<div class="field">
+					<label class="label">Who proposed this matter?</label>
+					<input class="input" id="mman" type="text" placeholder="Jeff Turkstra">
+				</div>
+				<div class="field">
+					<label class="label">The proposer claims that this is helpful for?</label>
+					<input class="input" id="mtheory" type="text" placeholder="Writing neat code">
+				</div>
+				<div class="field">
+					<label class="label">The target population?</label>
+					<input class="input" id="mvictim" type="text" placeholder="Students">
+				</div>
+				<div class="field">
+					<label class="label">The entity in which the matter takes effect?</label>
+					<input class="input" id="mrange" type="text" placeholder="CS240">
+				</div>
+			</div>
+			<button id="gen-btn" class="button is-primary">Generate!</button>
+			<div class="section" id="mjoke">
+				dfadsf
+			</div>
+		</div>
+		<script
+  			src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+  			integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI="
+  			crossorigin="anonymous"></script>
+		<script>
+			fetch("./jokes.txt")
+			.then(res => res.text())
+			.then(text => text.split('---'))
+			.then(jokes => {
+				console.log(jokes)
+				document.getElementById("gen-btn").onclick = () => {
+					const mrange = document.getElementById("mrange").value || "CS240"
+					const mthing = document.getElementById("mthing").value || "coding standard"
+					const mman = document.getElementById("mman").value || "Jeff Turkstra"
+					const mtheory = document.getElementById("mtheory").value || "writing neat code"
+					const mvictim = document.getElementById("mvictim").value || "students"
+
+					const rand = Math.floor(Math.random()*(jokes.length));
+				
+					const resString = jokes[rand]
+					  .replace(/mrange/g, mrange)
+					  .replace(/mthing/g, mthing)
+					  .replace(/mman/g, mman)
+					  .replace(/mtheory/g, mtheory)
+					  .replace(/mvictim/g, mvictim)
+					  .replace(/\n/g, '<br>')
+					document.getElementById("mjoke").innerHTML = resString
+				}
+			})
+
+		
+	
+	</script>
+	</body>
+</html>
