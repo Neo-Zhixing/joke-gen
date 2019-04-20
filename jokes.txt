@@ -102,7 +102,7 @@ Q: What's meant by an exchange of opinions?
 
 A: It’s when I come to a meeting with mman with my opinion, and leave with the mman’s.
 ---
-Q: What is the result of the implementation of mthing?
+Q: What was the result of the implementation of mthing?
 
 A: Someone still survived.
 ---
