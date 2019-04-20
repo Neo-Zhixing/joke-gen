@@ -51,7 +51,7 @@
 
 					const rand = Math.floor(Math.random()*(jokes.length));
 				
-					const resString = jokes[rand]
+					const resString = jokes[rand].trim()
 					  .replace(/mrange/g, mrange)
 					  .replace(/mthing/g, mthing)
 					  .replace(/mman/g, mman)
